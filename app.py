@@ -1,12 +1,9 @@
-from auth0_component import login_button
 import streamlit as st
 import datetime as datetime
 import pandas as pd
 
 def app():
 	st.header("Register a complaint:")
-	user_info = login_button(st.secrets["client_id"], domain = st.secrets["domain"])
-	st.write(user_info, dir(user_info))
 	data = pd.read_csv("complaint.csv")
 	print(data)
 	with st.form(key='my_form'):
