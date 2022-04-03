@@ -52,8 +52,7 @@ def app():
 			data.loc[len(data.index)] = [text_desc, name, location, time] 
 			
 			data.to_csv('complaint.csv', index = False)
-			dat = data.copy()
-			dat.drop(columns=['Name'])
+			dat = data.drop(columns=['Name'])
 			csv = dat.to_csv(index=False)
 
 			st.markdown(get_table_download_link(csv), unsafe_allow_html=True)
