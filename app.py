@@ -45,9 +45,9 @@ def app():
 
 			st.write("Thank you for lodging a complaint with us. We will try our best to make sure no other user has to go through this again.")
 			st.write("If you are aggrevated and want to take serious action, we have listed below the contacts of the Police and NGOs that work for women's safety and rights.")
-			st.write("Police: +192839238")
-			st.write("NGO 1: +192839238")
-			st.write("NGO 2: +192839238")
+			st.write("Police: +1 866-863-0511/+91 782-717-0170")
+			st.write("MSI United States: +1 202-601-2825")
+			st.write("Guria: +91 542-2504253")
 			st.write("")
 			data.loc[len(data.index)] = [text_desc, name, location, time] 
 			
