@@ -1,5 +1,7 @@
 # Asha
-Asha is a bot in order to register complaints against atrocious things
+Asha or Hope in Sanskrit is a personified form application who helps register incidents of past victims to help women in all communities. It symbolizes the hope that all women are safe here and are supported by other members. Asha helps a user register an incident. It records the description, location, time of incident. 
+
+For users who are willing to share their names for more authenticity, we provide a name column however, it is not a requirement. We understand it's hard coming forward and thus, anonymization of names is also an option. 
 
 ## Code Base:
 
