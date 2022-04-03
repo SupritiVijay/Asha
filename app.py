@@ -1,6 +1,11 @@
 import streamlit as st
 import datetime as datetime
 import pandas as pd
+import base64
+
+def get_table_download_link(path, link_name="Download Previous Incidents"):
+    b64 = base64.b64encode(path.encode()).decode()  # some strings <-> bytes conversions necessary here
+    href = f'<a href="data:file/csv;base64,{b64}">'+link_name+'</a>'
 
 def app():
 	st.header("Register the Incident:")
@@ -47,8 +52,7 @@ def app():
 			
 			data.to_csv('complaint.csv', index = False)
 
-			with open('complaint.csv') as f:
-				st.download_button('Download Previous Incidents', f)
+			st.markdown(get_table_download_link('complaint.csv'), unsafe_allow_html=True)
 
 
 if __name__ == '__main__':
