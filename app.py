@@ -3,7 +3,7 @@ import datetime as datetime
 import pandas as pd
 
 def app():
-	st.header("Register a complaint:")
+	st.header("Register the Incident:")
 	data = pd.read_csv("complaint.csv")
 	print(data)
 	with st.form(key='my_form'):
@@ -46,6 +46,9 @@ def app():
 			data.loc[len(data.index)] = [text_desc, name, location, time] 
 			
 			data.to_csv('complaint.csv', index = False)
+
+			with open('complaint.csv') as f:
+				st.download_button('Download Previous Incidents', f)
 
 
 if __name__ == '__main__':
