@@ -4,8 +4,9 @@ import pandas as pd
 import base64
 
 def get_table_download_link(path, link_name="Download Previous Incidents"):
-    b64 = base64.b64encode(path.encode()).decode()  # some strings <-> bytes conversions necessary here
+    b64 = base64.b64encode(path.encode()).decode()
     href = f'<a href="data:file/csv;base64,{b64}">'+link_name+'</a>'
+    return href
 
 def app():
 	st.header("Register the Incident:")
